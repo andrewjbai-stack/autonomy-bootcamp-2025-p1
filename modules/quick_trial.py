@@ -5,7 +5,7 @@ Runs colour detection on sample image.
 import pathlib
 import time
 
-from modules.detect_colours import DetectBlue, DetectRed
+from detect_colours import DetectBlue, DetectRed
 
 
 # Output results of colour detections
@@ -20,5 +20,5 @@ RED_DETECTION = OUTPUT_PATH / f"red_colour_detection_{time.time_ns()}.jpg"
 blue_detector = DetectBlue.create()
 red_detector = DetectRed.create()
 
-blue_detector.run(IMAGE, BLUE_DETECTION)
-red_detector.run(IMAGE, RED_DETECTION)
+blue_detector.run(IMAGE, "test.jpg", BLUE_DETECTION)
+red_detector.run(IMAGE, "testred.jpg", RED_DETECTION)
